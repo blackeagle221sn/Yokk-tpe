@@ -1,5 +1,12 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// --- Header scroll effect ---
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
 // --- Menu mobile ---
 const navToggle = document.getElementById('nav-toggle');
 const mainNav = document.getElementById('main-nav');
